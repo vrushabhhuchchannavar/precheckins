@@ -17,5 +17,3 @@ const request = require('supertest');
         const result = val(2,3);
         expect(result).toBe();
     });
-
-
