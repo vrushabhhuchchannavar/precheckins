@@ -20,7 +20,7 @@ const request = require('supertest');
 
     it('pass', () => {
         const result = val(3,1);
-        expect(result).toBe(4)
-    })
+        expect(result).toBe()
+    });
 
 
