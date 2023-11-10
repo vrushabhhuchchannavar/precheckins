@@ -3,7 +3,7 @@ name: Run Tests on Multiple Branches
 on:
   push:
     branches:
-      - main
+      - master
       - vrushabhhuchchannavar-patch-1
 
 jobs:
