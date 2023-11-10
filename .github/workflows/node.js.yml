@@ -10,14 +10,12 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  my-job:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: 14
 
     steps:
     - uses: actions/checkout@v3

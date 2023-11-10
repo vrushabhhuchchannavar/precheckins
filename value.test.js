@@ -15,7 +15,7 @@ const request = require('supertest');
 
     it('fail', () => {
         const result = val(2,3);
-        expect(result).toBe(5);
+        expect(result).toBe();
     });
 
 
