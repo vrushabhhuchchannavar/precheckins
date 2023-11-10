@@ -1,0 +1,13 @@
+create => update => commit => push (local)
+
+
+send request => merge 
+
+
+
+scenerio 1 : user made a branch from main branch and made some changes 
+	imagine user wants to merge the changes 
+	we have to make some test so we dont want unwanted merge to be ad	
+
+
+pre merge => hook use 
