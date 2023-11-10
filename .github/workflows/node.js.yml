@@ -1,10 +1,10 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-name: Test and Push
+name: Run Tests on Multiple Branches
 
 on:
   push:
     branches:
-      - master
+      - main
+      - vrushabhhuchchannavar-patch-1
 
 jobs:
   test-main:
@@ -25,7 +25,7 @@ jobs:
       - name: Run tests on main
         run: npm test
 
-  test-local:
+  test-feature:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,8 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests on local branch
+      - name: Run tests on feature branch
         run: npm test
+
 
 
 
