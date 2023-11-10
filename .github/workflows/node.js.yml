@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      # - vrushabhhuchchannavar-patch-1
+      - vrushabhhuchchannavar-patch-1
 
 jobs:
   test-main:
