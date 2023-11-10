@@ -9,3 +9,8 @@ it('mult', () => {
     const result = response(3,2);
     expect(result).toBe(6);
 });
+
+it('multiple', () => {
+    const res = response(3,1);
+    expect(res).toBe(3)
+});
