@@ -7,7 +7,7 @@ on:
       - vrushabhhuchchannavar-patch-1
 
 jobs:
-  test-main:
+  testing-the-branches:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,12 +25,8 @@ jobs:
       - name: Run tests on main
         run: npm test
 
-  test-feature:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: checkout to master branch
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v2
           with:
             ref: master
 
