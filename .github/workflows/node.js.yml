@@ -4,9 +4,9 @@ name: Test and Push
 on:
   push:
     branches:
-      - main
-    paths:
-      - '**/*' # Trigger the workflow if any file changes in any directory
+      - master
+    # paths:
+    #   - '**/*' # Trigger the workflow if any file changes in any directory
 
 jobs:
   test-local-then-main:
