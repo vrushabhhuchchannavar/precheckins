@@ -29,8 +29,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: git checkout master
-        uses: actions/checkout@v2
+      - name: checkout master
+        uses: actions/git checkout master
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
