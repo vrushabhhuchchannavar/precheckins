@@ -4,10 +4,12 @@ name: Test and Push
 on:
   push:
     branches:
-      - master
+      - main
+    paths:
+      - '**/*' # Trigger the workflow if any file changes in any directory
 
 jobs:
-  test-main:
+  test-local-then-main:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,29 +21,21 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests on main
-        run: npm test
-
-  test-local:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Install dependencies
+      - name: Install dependencies for local branch
         run: npm install
 
       - name: Run tests on local branch
         run: npm test
+
+      - name: Switch to main branch
+        run: git checkout main
+
+      - name: Install dependencies for main branch
+        run: npm install
+
+      - name: Run tests on main branch
+        run: npm test
+
 
 
 
