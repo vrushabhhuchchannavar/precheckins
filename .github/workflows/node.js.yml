@@ -9,7 +9,7 @@ on:
     #   - '**/*' # Trigger the workflow if any file changes in any directory
 
 jobs:
-  test-local-then-main:
+  test-main-branch:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,11 +27,11 @@ jobs:
       - name: Run tests on local branch
         run: npm test
 
-  test-master-branch:
+  test-local-branch:
     runs-on: ubuntu-latest
     
       - name: Switch to main branch
-        run: git checkout master
+        run: git checkout vrushabhhuchchannavar-patch-1
 
       - name: Checkout code
         uses: actions/checkout@v2
