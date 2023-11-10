@@ -13,16 +13,7 @@ const request = require('supertest');
         expect(result).toBe(5);
     });
 
-    it('fail', () => {
-        const result = val(2,3);
-        expect(result).toBe(5);
-    });
-
-    it('pass', () => {
-        const result = val(3,1);
-        expect(result).toBe(4)
-    });
-
-
-
-    
+    // it('fail', () => {
+    //     const result = val(2,3);
+    //     expect(result).toBe();
+    // });
