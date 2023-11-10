@@ -27,13 +27,22 @@ jobs:
       - name: Run tests on local branch
         run: npm test
 
+  test-master-branch:
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
       - name: Switch to main branch
-        run: git checkout main
+        run: git checkout master
 
       - name: Install dependencies for main branch
         run: npm install
 
-      - name: Run tests on main branch
+      - name: Run tests on master branch
         run: npm test
 
 
