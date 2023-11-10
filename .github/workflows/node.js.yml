@@ -27,9 +27,9 @@ jobs:
       - name: Run tests on local branch
         run: npm test
 
-jobs:
   test-master-branch:
-    steps:
+    runs-on: ubuntu-latest
+    
       - name: Switch to main branch
         run: git checkout master
 
