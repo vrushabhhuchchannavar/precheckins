@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - vrushabhhuchchannavar-patch-1
+      # - vrushabhhuchchannavar-patch-1
 
 jobs:
   test-main:
@@ -29,8 +29,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout master
-        uses: actions/git checkout master
+      - name: checkout to master branch
+        - uses: actions/checkout@v4
+          with:
+            ref: master
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
