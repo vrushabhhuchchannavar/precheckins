@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Install dependencies for local branch
         run: npm install
 
       - name: Run tests on main
@@ -35,11 +35,12 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Install dependencies for main branch
         run: npm install
 
       - name: Run tests on master branch
         run: npm test || true
+
 
 
 
