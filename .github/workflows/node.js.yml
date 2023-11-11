@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests on feature branch
+      - name: Run tests on master branch
         run: npm test || true
 
 
