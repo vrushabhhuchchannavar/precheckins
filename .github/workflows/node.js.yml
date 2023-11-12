@@ -1,45 +1,45 @@
-name: Run Tests on Multiple Branches
+# name: Run Tests on Multiple Branches
 
-on:
-  push:
-    branches:
-      # - master
-      - vrushabhhuchchannavar-patch-1
+# on:
+#   push:
+#     branches:
+#       # - master
+#       - vrushabhhuchchannavar-patch-1
 
-jobs:
-  testing-the-branches:
-    runs-on: ubuntu-latest
+# jobs:
+#   testing-the-branches:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14
 
-      - name: Install dependencies for local branch
-        run: npm install
+#       - name: Install dependencies for local branch
+#         run: npm install
 
-      - name: Run tests on main
-        run: npm test || true
+#       - name: Run tests on main
+#         run: npm test || true
 
-      - name: checkout to master branch
-        uses: actions/checkout@v2
-        with:
-          ref: master
+#       - name: checkout to master branch
+#         uses: actions/checkout@v2
+#         with:
+#           ref: master
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14
 
-      - name: Install dependencies for main branch
-        run: npm install
+#       - name: Install dependencies for main branch
+#         run: npm install
 
-      - name: Run tests on master branch
-        run: npm test || true
+#       - name: Run tests on master branch
+#         run: npm test || true
 
 
 
