@@ -1,7 +1,4 @@
 {
-    "testResultsProcessor": "jest-json-reporter",
-    "reporters": ["default"],
-    "coverageReporters": ["json-summary", "text", "lcov"],
-    "coverageDirectory": "test-results/report/coverage",
-    "testResults": "/test-results/report/test-results.json"
-  }
+  "testResultsProcessor": "jest-json-reporter",
+  "reporters": ["default"]
+}
