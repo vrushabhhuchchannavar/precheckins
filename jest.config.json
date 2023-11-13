@@ -1,4 +1,5 @@
 {
-  "testResultsProcessor": "jest-json-reporter",
-  "reporters": ["default"]
+  "testResultsProcessor": "jest-junit",
+  "reporters": ["default"],
+  "testResults": "test-results/report/test-result.xml"
 }
