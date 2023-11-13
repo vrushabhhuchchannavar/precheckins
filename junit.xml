@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="2" errors="0" time="0.303">
-  <testsuite name="undefined" errors="0" failures="2" skipped="0" timestamp="2023-11-13T08:45:07" time="0.216" tests="3">
+<testsuites name="jest tests" tests="6" failures="2" errors="0" time="0.422">
+  <testsuite name="undefined" errors="0" failures="2" skipped="0" timestamp="2023-11-13T08:49:08" time="0.338" tests="3">
     <testcase classname=" sum of a,b" name=" sum of a,b" time="0.002">
     </testcase>
-    <testcase classname=" sum is " name=" sum is " time="0.006">
+    <testcase classname=" sum is " name=" sum is " time="0.002">
       <failure>Error: expect(received).toBe(expected) // Object.is equality
 
 Expected: undefined
@@ -39,12 +39,12 @@ Received: 5
     at runTest (/home/vrushabh/projects/copy1/ymltesting/precheckins/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2023-11-13T08:45:07" time="0.042" tests="3">
-    <testcase classname=" pass" name=" pass" time="0">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2023-11-13T08:49:08" time="0.041" tests="3">
+    <testcase classname=" pass" name=" pass" time="0.001">
     </testcase>
     <testcase classname=" mult" name=" mult" time="0">
     </testcase>
-    <testcase classname=" multiple" name=" multiple" time="0">
+    <testcase classname=" multiple" name=" multiple" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

@@ -7,7 +7,7 @@ const {value} = require('./example');
 
     it('sum is ', () => {
         const result = value(2,3);
-        expect(result).toBe();
+        expect(result).toBe(5);
     });
 
     it('fail', () => {
