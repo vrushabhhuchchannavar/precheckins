@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies for local branch
         run: npm install
 
-      - name: Run tests on main
+      - name: Run tests on local
         run: npm test || true
 
       - name: checkout to master branch

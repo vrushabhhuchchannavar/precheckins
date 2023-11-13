@@ -1,7 +1,4 @@
 const {value} = require('./example');
-const request = require('supertest');
-
-
 
     it('sum of a,b', () => {
         const result = value(2,2);
