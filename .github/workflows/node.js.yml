@@ -54,16 +54,16 @@ jobs:
           path: test-results.json
 
       - name: Compare test results
-          run: |
-            # Extract relevant metrics from the working branch
-            main_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests }}")
-            main_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests }}")
-            main_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests }}")
+        run: |
+          # Extract relevant metrics from the working branch
+          main_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests }}")
+          main_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests }}")
+          main_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests }}")
 
-            # Extract relevant metrics from the master branch
-            master_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests-master }}")
-            master_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests-master }}")
-            master_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests-master }}")
+          # Extract relevant metrics from the master branch
+          master_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests-master }}")
+          master_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests-master }}")
+          master_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests-master }}")
 
 
 
