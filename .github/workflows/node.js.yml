@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node
         with:
           node-version: 14
 
@@ -26,18 +26,18 @@ jobs:
         run: npm test || true
 
       - name: Upload test results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact
         with:
           name: test-results-local
           path: test-results.json
 
       - name: checkout to master branch
-        uses: actions/checkout@v2
+        uses: actions/checkout
         with:
           ref: master
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node
         with:
           node-version: 14
 
@@ -48,10 +48,23 @@ jobs:
         run: npm test || true
 
       - name: Upload test results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact
         with:
           name: test-results-master
           path: test-results.json
+
+      - name: Compare test results
+          run: |
+            # Extract relevant metrics from the working branch
+            main_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests }}")
+            main_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests }}")
+            main_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests }}")
+
+            # Extract relevant metrics from the master branch
+            master_failed=$(echo "${{ steps.testing-the-branches.outputs.numFailedTests-master }}")
+            master_passed=$(echo "${{ steps.testing-the-branches.outputs.numPassedTests-master }}")
+            master_pending=$(echo "${{ steps.testing-the-branches.outputs.numPendingTests-master }}")
+
 
 
 
