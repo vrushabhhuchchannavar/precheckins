@@ -1,5 +1,9 @@
+
+
 {
   "testResultsProcessor": "jest-junit",
-  "reporters": ["default"],
-  "testResults": "test-results/report/test-result.xml"
+  "reporters": [
+    "default",
+    ["jest-junit", { "outputFile": "test-results/report/junit.xml" }]
+  ]
 }
