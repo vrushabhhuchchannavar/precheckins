@@ -18,7 +18,4 @@ const request = require('supertest');
         expect(result).toBe();
     });
 
-    // {
-    //     "testResultsProcessor": "jest-json-reporter",
-    //     "reporters": ["default"]
-    //   }
+    
