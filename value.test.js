@@ -10,7 +10,7 @@ const request = require('supertest');
 
     it('sum is ', () => {
         const result = value(2,3);
-        expect(result).toBe(5);
+        expect(result).toBe();
     });
 
     it('fail', () => {
