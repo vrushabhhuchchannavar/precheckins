@@ -1,0 +1,4 @@
+{
+    "testResultsProcessor": "jest-json-reporter",
+    "reporters": ["default"]
+  }
