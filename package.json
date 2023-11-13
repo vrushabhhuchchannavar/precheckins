@@ -1,7 +1,6 @@
 {
   "name": "precheckins",
   "version": "1.0.0",
-  "description": "",
   "main": "example.js",
   "scripts": {
     "test": "jest"
@@ -12,5 +11,18 @@
     "jest": "^29.7.0",
     "jest-json-reporter": "^1.2.2",
     "supertest": "^6.3.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrushabhhuchchannavar/precheckins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vrushabhhuchchannavar/precheckins/issues"
+  },
+  "homepage": "https://github.com/vrushabhhuchchannavar/precheckins#readme",
+  "description": ""
 }
